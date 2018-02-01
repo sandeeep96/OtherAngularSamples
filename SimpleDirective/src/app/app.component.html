@@ -1,0 +1,8 @@
+<p> select any one before checking for the effect</p>
+
+<input type="radio" name="hover" (click)="key1='with'">Add hover effect
+<input type="radio" name="hover" (click)="key1='noWith'">No hover effect
+
+<p [appColorDirective]="key1"> Hover me for some action to be done</p>
+
+{{key1}}

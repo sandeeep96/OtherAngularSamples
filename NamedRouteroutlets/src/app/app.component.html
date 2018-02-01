@@ -1,0 +1,23 @@
+<!-- <a [routerLink]="['/secound', { outlets: { 'sidebar1': ['component-three'],'sidebar2': ['component-four'] } }]">Component three and four in respective</a>     -->
+<nav>
+    <a [routerLink]="['/component-one']">Component One</a>
+    <a [routerLink]="['/component-two']">Component Two</a>
+    <a [routerLink]="[{ outlets: { 'sidebar1': ['component-three'],'sidebar2': ['component-four'] } }]">Component three and four in respective</a>    
+    <a [routerLink]="[{ outlets: { 'sidebar1': ['component-three'] } }]">Component three in bar1</a>
+    <a [routerLink]="[{ outlets: { 'sidebar1': ['component-four'] } }]">Component four in bar1</a>
+    <a [routerLink]="[{ outlets: { 'sidebar2': ['component-four'] } }]">Component four in bar2</a>
+  </nav>
+  <div style="color: green; margin-top: 1rem;">Outlet:</div>
+  <div style="border: 2px solid green; padding: 1rem;">
+    <router-outlet></router-outlet>
+  </div>
+  
+  <div style="color: green; margin-top: 1rem;">Sidebar Outlet1(for comp3 alone):</div>
+  <div style="border: 2px solid blue; padding: 1rem;">
+    <router-outlet name="sidebar1"></router-outlet>
+  </div>
+
+  <div style="color: green; margin-top: 1rem;">Sidebar Outlet2(for comp4 alone):</div>
+  <div style="border: 2px solid blue; padding: 1rem;">
+    <router-outlet name="sidebar2"></router-outlet>
+  </div>

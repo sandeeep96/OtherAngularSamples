@@ -1,0 +1,9 @@
+<h2>Employee records</h2>
+<h1 *ngIf="idid">{{idid}} of {{namename}} is selected</h1>
+<!-- <h1 (gotIt)="GotIt($event)" *ngIf="idid">{{idid}} of {{namename}} is selected</h1> -->
+<hr>
+<app-my-own-comp [n]="emp.name" [i]="emp.id" (gotIt)="okGotIt($event)"
+*ngFor="let emp of employeeRecord">component loading</app-my-own-comp>
+
+
+<app-my-own-comp1 (gotIt)="GotIt($event)"></app-my-own-comp1>

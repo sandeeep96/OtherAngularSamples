@@ -1,0 +1,21 @@
+<!-- <h1>Template driven Form</h1>
+
+<form #userform="ngForm" (ngSubmit)="onSubmit(userform.value)">
+  <input type="text" name="FirstName" placeholder="First Name" ngModel>
+  <br>
+  <input type="text" name="SecoundName" placeholder="Secound Name" ngModel>
+
+  <input type="submit">
+
+</form> -->
+
+<h1>Module driven Form</h1>
+
+<form [formGroup]="forms" (ngSubmit)="onSubmit(forms.value)">
+  <input type="text" name="FirstName" placeholder="First Name" formControlName="firstName">
+  <br>
+  <input type="text" name="SecoundName" placeholder="Secound Name" formControlName="lastName">
+
+  <input type="submit">
+      
+</form>
