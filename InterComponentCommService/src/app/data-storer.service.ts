@@ -11,9 +11,9 @@ export class DataStorerService {
 
   count=this.MyData.length;
   
-  getAllNames():Array<string>{
+  getAllNames():Promise<Array<string>>{
     console.log("in service get all",this.MyData.length)
-    return this.MyData;
+    return Promise.resolve(this.MyData);
   }
 
   getLengthOfArray():number{

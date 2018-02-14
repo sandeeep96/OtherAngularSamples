@@ -4,7 +4,7 @@ import { DataStorerService } from '../data-storer.service';
 @Component({
   selector: 'app-count',
   templateUrl: './count.component.html',
-  styleUrls: ['./count.component.css']
+  // styleUrls: ['./count.component.css']
 })
 export class CountComponent implements OnInit {
 
@@ -14,8 +14,18 @@ export class CountComponent implements OnInit {
 
   count:number=0;
   ngOnInit() {
-    this.myArray=this.dataStorage.getAllNames();
-    this.count=this.myArray.length;
+    // this.myArray=this.dataStorage.getAllNames();
+    this.dataStorage.getAllNames().then(resultArray => {
+      this.myArray = resultArray;
+      this.count =this.myArray.length;
+    })
+    // this.count=this.myArray.length;
+  };
+
+  getCount() {
+    return this.count = this.myArray.length;
   }
+
+  
 
 }

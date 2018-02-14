@@ -4,7 +4,7 @@ import { DataStorerService } from '../data-storer.service';
 @Component({
   selector: 'app-add',
   templateUrl: './add.component.html',
-  styleUrls: ['./add.component.css']
+  // styleUrls: ['./add.component.css']
 })
 export class AddComponent implements OnInit {
 

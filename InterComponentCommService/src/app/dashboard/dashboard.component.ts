@@ -4,7 +4,7 @@ import { DataStorerService} from '../data-storer.service'
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  // styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
 
@@ -13,7 +13,10 @@ export class DashboardComponent implements OnInit {
   myArray: Array<string>=[];
 
   ngOnInit() {
-    this.myArray=this.dataStorage.getAllNames();
+    this.dataStorage.getAllNames().then(resultArray => {
+      this.myArray = resultArray;
+      // this.count =this.myArray.length;
+    })
   }
 
 }
